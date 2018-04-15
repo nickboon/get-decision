@@ -1,10 +1,14 @@
 {
     "name": "get-decision",
+    "productName": "GetDecision",
     "version": "1.0.0",
     "description": "App to help weigh decisions.",
     "main": "src/main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "electron .",
+        "test": "node test/spec.js ./GetDecision-win32-x64/GetDecision.exe",
+        "build": "electron-packager . --no-prune --ignore=/node_modules --ignore=/package-lock.json --ignore=/test --ignore=/.gitignore --overwrite --icon=src/icons/win/32x32.ico",
+        "reinstall": "reinstall"
     },
     "author": "Nick Boon",
     "license": "ISC",
@@ -25,5 +29,11 @@
             ]
         }
     },
-    "eslintIgnore": []
+    "eslintIgnore": [],
+    "devDependencies": {
+        "electron": "^1.8.4",
+        "electron-packager": "^12.0.1",
+        "spectron": "^3.8.0",
+        "tape": "^4.9.0"
+    }
 }

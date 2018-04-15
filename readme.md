@@ -1,0 +1,1 @@
+[https://en.wikipedia.org/wiki/Analytic_hierarchy_process_%E2%80%93_car_example](https://en.wikipedia.org/wiki/Analytic_hierarchy_process_%E2%80%93_car_example)
