@@ -1,9 +1,9 @@
-const { Application } = require('spectron');
+const Application = require('spectron').Application;
 const test = require('tape');
 // pass the path to the built application from the command line
 const path = process.argv[2];
 
-function wrapper(description, fn) {
+module.exports = (description, fn) => {
     const app = new Application({ path: path });
 
     test(description, t => {
@@ -19,5 +19,3 @@ function wrapper(description, fn) {
             .finally(() => t.end());
     });
 }
-
-module.exports = wrapper;
